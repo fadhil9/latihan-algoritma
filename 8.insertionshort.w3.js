@@ -4,4 +4,5 @@
 // 3.var j = i-1 /0
 // 4.buat while jika j >=0 dan arr[j]/0 >arr[i]/1 
 // 5.jika true maka  arr[j/0+1] = arr[j]/0
-// 6. j/0 = j/0-1  
+// 6. j/0 = j/0-1 
+// 6.j=j-1 utk while loopnya berhenti
