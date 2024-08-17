@@ -10,11 +10,13 @@
 
 function insertionShort(arr) {
     for(let i = 1; i< arr.length; i++){
-        let b = arr[i]
-        let a = i-1
+        let kunci = arr[i]  //b itu nilai elemen kedua : b=3
+        let kirikunci = i-1 //  a itu index sebelah kiri sebelum b , a = 0
 
-        while(a>=0 && arr[a]>b){
-            arr[a+1] = arr[a]
+        while(kirikunci>=0 && arr[kirikunci]>kunci){
+            
+            // arr[a+1] = arr[a]  
+            arr[a] = arr[a+1]  
             a = a-1 
         }
 
@@ -23,5 +25,5 @@ function insertionShort(arr) {
     return arr
 }
 
-console.log(insertionShort([5, 2, 9]))
+console.log(insertionShort([10,3,9]))
 
