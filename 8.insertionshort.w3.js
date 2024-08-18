@@ -1,29 +1,26 @@
-// insertion short
-// 1.looping dari elemen [1] dari dengan for loop
-// 2.array[i]/1 elemen sekarang masukin var key
-// 3.var j = i-1 /0
-// 4.buat while jika j >=0 dan arr[j]/0 >arr[i]/1 alias  jika a>b
-// 5.jika true maka  arr[j+1] = arr[j]/   alias maka a = b
-// 6. j/0 = j/0-1 
-// 7.j=j-1 utk while loopnya berhenti
-// 8.jika berhenti key = arr[j+1] alias b adalah a
+//insertion short itu pake for loop dan while loop
+//1.buat for loop dengan nilai i =1 
+//2.buat variable key dengan nilai array[y]
+//3.buat var j = i-1 utk bandingin nanti ke key
+//4.buat while loop dengan 2 syarat. j>=0 dan arr[j]>key
+//5.isinya arr[j+1] = arr[j]    jadi misal [4,1] diubah jadi [4,4]
+//6. j = j-1 . ada 2 tujuan biar while loopnya berenti dan agar bandingin terus kekiri,,
+//7.jika while loop berhenti berarti nilai j = -1  dan array [4,4]
+//8.maka kita buat arr[j+1] = key   == arr[-1+1] = 1 jadi hasilnya array [1,4]
 
-function insertionShort(arr) {
-    for(let i = 1; i< arr.length; i++){
-        let kunci = arr[i]  //nilai elemen array                //[4,5,9,(1)] kunci =1
-        let indexkirikunci = i-1      //index bagian kiri kunci  // 2
+function insertion(arr) {
+    for(let i=1; i < arr.length; i++){
+        let key = arr[i];
+        let j = i-1;
 
-        while(indexkirikunci>=0 && arr[indexkirikunci]>kunci){  //[4,5,(9>kunci=1),1] true, [4,(5>kunci=1),9,9] true
-                                                                //[(4>kunci=1),5,1,9] true , false 
+        while(j>=0 && arr[j]>key){
+            arr[j+1] = arr[j]
 
-            arr[indexkirikunci+1] = arr[indexkirikunci]         //[4,5,(9,9)] , [4,(5,5),9]. [(4,4),5,9]
-            indexkirikunci= indexkirikunci-1                      //1, 0, -1
+            j=j-1;
         }
-
-        arr[indexkirikunci+1] = kunci                           //[(1),4,5,9,)]
+        arr[j+1]=key;
     }
     return arr
 }
-
-console.log(insertionShort([4,5,9,1]))
-
+let array =[4,1,6,4,12,4,33,9321,0];
+console.log(insertion(array));
