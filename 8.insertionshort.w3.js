@@ -8,19 +8,19 @@
 //7.jika while loop berhenti berarti nilai j = -1  dan array [4,4]
 //8.maka kita buat arr[j+1] = key   == arr[-1+1] = 1 jadi hasilnya array [1,4]
 
-function insertion(arr) {
-    for(let i=1; i < arr.length; i++){
-        let key = arr[i];
+function insertion(params) {
+    for(let i =1; i<params.length;i++){
+        let key = params[i];
         let j = i-1;
 
-        while(j>=0 && arr[j]>key){
-            arr[j+1] = arr[j]
-
+        while (j>=0 && params[j]>key) {
+            params[j+1] = params[j];
             j=j-1;
         }
-        arr[j+1]=key;
-    }
-    return arr
+        params[j+1]= key;
+    } 
+    return params
 }
-let array =[4,1,6,4,12,4,33,9321,0];
+
+let array =[4,1,6,4,12,4,33,931,0,3,0];
 console.log(insertion(array));
