@@ -24,3 +24,5 @@ function getTotalX(a,b) {
     }
     return count
 }
+
+console.log(getTotalX([2,6],[24,36]));
