@@ -13,6 +13,8 @@ function getTotalX(a,b) {
     }
 
     let lcmA = a.reduce((acc,val)=>lcm(acc,val));
+    console.log("lcma:"+""+lcmA);
+    
 
     let gcdB = b.reduce((acc,val)=>gcd(acc,val));
 
